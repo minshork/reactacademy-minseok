@@ -1,0 +1,36 @@
+@use './var' as v;
+@use 'sass:color';
+
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+@mixin card{
+    background-color: white;
+    border-radius: v.$radius;
+    box-shadow: v.$shadow;
+}
+
+@mixin buttons($bg:v.$main, $color:#FFF) {
+    background-color: $bg;
+    color: $color;
+    border: 0;
+    border-radius: v.$radius;
+    padding: 10px;
+    transition: all 0.3s;
+    &:hover{
+        background-color: color.adjust($bg, $lightness: -10%);
+    }
+}
+
+@mixin fade-up($upp:20px) {
+    opacity: 0;
+    transform: translateY($upp);
+    transition: all 0.3s;
+    &.show{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

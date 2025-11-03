@@ -1,0 +1,10 @@
+body{
+  background-color: skyblue;
+  padding: 30px;
+}
+
+button{
+  background-color: rgb(67, 67, 251);
+  color: white;
+  font-weight: 500;
+}

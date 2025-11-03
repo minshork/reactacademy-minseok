@@ -1,0 +1,36 @@
+@use "sass:color";
+
+$radius: 10px;
+$mainColor: #CCC;
+$danger: tomato;
+$mainBg: green; 
+$bl: blue;
+
+.btn{
+    padding: 10px;
+    border-radius: $radius;
+    cursor: pointer;
+    color: white;
+    background-color: $mainBg;
+    transition: all 0.3s;
+
+    &:hover{
+        background-color: color.adjust($mainBg, $lightness:8%);
+    }
+
+    &.danger{
+        background-color: $danger;
+
+        &:hover{
+            background-color: color.adjust($danger, $lightness:-8%);
+        }
+    }
+
+    &.blue{
+        background-color: $bl;
+
+        &:hover{
+            background-color: color.adjust($bl, $lightness:-8%);
+        }
+    }
+}

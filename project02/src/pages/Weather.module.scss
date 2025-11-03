@@ -1,0 +1,54 @@
+.weather{
+    width: 1400px;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    border: 10px solid rgb(3, 90, 0);
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    // background-color: lightgray;
+    background-color: rgb(255, 96, 215);
+    box-shadow: 0px 4px 20px rgb(251, 255, 9);
+    border-radius: 50px 0 50px 0;
+
+    .info{
+        width: 300px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(166, 219, 235);
+        border-radius: 15px;
+        box-shadow: 15px 20px 40px rgb(138, 255, 158);
+        // border: 2px solid darkblue;
+        // 떼잉 쯧
+
+        .datas{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            
+
+            & > div{
+                width: 20%;
+                font-weight: bold;
+                // border: 1px solid black;
+            }
+
+            img{
+                width: 50%;
+                // border: 1px solid black;
+            }
+        }
+    }
+
+    .map{
+        width: 50%;
+        height: 500px;
+        border-radius: 15px;
+        // border: 2px solid darkblue;
+    }
+}

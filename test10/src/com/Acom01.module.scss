@@ -1,0 +1,17 @@
+$bgColor : skyblue;
+$mainSize : 25px;
+$radius : 10px;
+
+.outBox{
+    background-color: $bgColor;
+    border: 1px solid black;
+    border-radius: $radius;
+
+    h2{
+        font-size: $mainSize;
+    }
+
+    h3{
+        font-size: $mainSize + 5px;
+    }
+}

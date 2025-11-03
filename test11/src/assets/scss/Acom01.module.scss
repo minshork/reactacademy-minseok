@@ -1,0 +1,20 @@
+@use './var' as v;
+// 통상적으로는 @use './var' as *; 을 사용하지만 단점으로는 에러가 잘남
+// background-color: v.$bgColor;
+
+@use './mixin' as m;
+// 통상적으로는 @use './mixin' as *; 을 사용하지만 단점으로는 에러가 잘남
+// @include m.flexC;
+
+.header{
+    @include m.flexC;
+    background-color: v.$bgColor;
+    color: v.$mainColor;
+    height: 80px;
+
+    .nav{
+        @include m.flexC;
+        gap: 40px;
+        color: v.$mainColor;
+    }
+}

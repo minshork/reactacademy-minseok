@@ -1,0 +1,25 @@
+[
+    {
+        "id": 1,
+        "title": "병원1",
+        "url": "/imgs/img_01.jpg"
+    },
+
+    {
+        "id": 2,
+        "title": "병원2",
+        "url": "/imgs/img_02.jpg"
+    },
+
+    {
+        "id": 3,
+        "title": "병원3",
+        "url": "/imgs/img_03.jpg"
+    },
+
+    {
+        "id": 4,
+        "title": "병원4",
+        "url": "/imgs/img_04.jpg"
+    }
+]

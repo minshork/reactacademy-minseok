@@ -1,0 +1,61 @@
+@use "sass:color";
+@use './mixin' as m;
+@use './var' as v;
+
+body{
+    @include m.flexCen;
+    flex-direction: column;
+    background-color: v.$bgColor;
+}
+
+.todo{
+    background-color: color.adjust(v.$bgColor, $lightness: 5%);
+    padding: 60px 50px 50px 50px;
+    border: 5px solid color.adjust(v.$bgColor, $lightness: -10%);
+    border-radius: v.$radius;
+
+    .top{
+        @include m.flexCen;
+        gap: 30px;
+
+        input{
+            padding: 10px;
+            border-radius: v.$radius;
+            border: 1px solid color.adjust(v.$bgColor, $lightness: -10%);
+        }
+
+        button{
+            border: 5px solid color.adjust(v.$bgColor, $lightness: -10%);
+
+            &:hover{
+                background-color: color.adjust(v.$bgColor, $lightness: -5%);
+                color: v.$mainColor;
+            }
+        }
+    }
+
+    ul{
+        color: v.$mainColor;
+        display: flex;
+        flex-direction: column;
+        // border: 1px solid black;
+
+        li{
+            position: relative;
+            margin-bottom: 15px;
+            button{
+                padding: 5px 10px;
+                font-size: 13px;
+                position: absolute;
+                right: 0; top: -5px;
+                border: 5px solid color.adjust(v.$bgColor, $lightness: -10%);
+
+                &:hover{
+                    background-color: color.adjust(v.$bgColor, $lightness: -5%);
+                    color: v.$mainColor;
+                }
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,33 @@
+@use '../assets/scss/var' as v;
+@use '../assets/scss/mixin' as m;
+
+.home{
+    // background-color: v.$gray;
+    height: 100vh;
+    width: 1200px;
+    margin: 0 auto;
+
+    .title{
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    .slider{
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: v.$radius;
+    }
+
+    .track{
+        display: flex;
+        will-change: transform; // 성능 최적화 힌트
+
+        img{
+            width: 100%;
+            flex: 0 0 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+}

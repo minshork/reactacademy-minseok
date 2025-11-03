@@ -1,0 +1,25 @@
+@use '../assets/scss/var' as v;
+@use '../assets/scss/mixin' as m;
+
+.navbar{
+    width: 100%;
+    background-color: v.$dark;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+
+    .menu{
+        @include m.flex-center;
+        gap : v.$gap;
+    }
+
+    a{ // Link
+        color: white;
+        font-weight: bold;
+        transition: all 0.3ms;
+
+        &:active, &:hover{
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
+}

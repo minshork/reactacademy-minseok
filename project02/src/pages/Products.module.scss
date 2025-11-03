@@ -1,0 +1,51 @@
+.products{
+
+    h2{
+        width: fit-content;
+        padding: 10px 100px; 
+        background: #a067e2;
+        margin: 15px auto;
+        border-radius: 8px;
+        color: whitesmoke;
+    }
+    .gidBox{
+        display: flex;
+        justify-content: space-between;
+
+        .card{
+            border: 2px solid #a067e2;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 3px 3px 10px rgba($color: black, $alpha: 0.2);
+
+            .btns{
+                
+                .addBtn{
+                    padding: 8px 15px;
+                    border-radius: 5px;
+                    // border: 2px solid black;
+                    background-color: #a067e2;
+                    border: none;
+                    color: #fff;
+                    box-shadow: 3px 3px 10px rgba($color: #000000, $alpha: 0.3);
+                }
+
+                .btnOutbox{
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+
+                    button{
+                        padding: 8px 15px;
+                        border-radius: 5px;
+                        // border: 2px solid black;
+                        background-color: #a067e2;
+                        border: none;
+                        color: #fff;
+                        box-shadow: 3px 3px 10px rgba($color: #000000, $alpha: 0.3);
+                    }
+                }
+            }
+        }
+    }
+}

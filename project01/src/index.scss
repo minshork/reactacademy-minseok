@@ -1,0 +1,12 @@
+@use './assets/scss/mixin' as m;
+@use './assets/scss/var' as v;
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.btn{
+  @include m.buttons();
+}

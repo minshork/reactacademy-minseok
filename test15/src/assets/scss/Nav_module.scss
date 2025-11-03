@@ -1,0 +1,28 @@
+.nav_container{
+    width: 100vw;
+    height: 100px;
+    justify-items: start;
+    align-items: center;
+    position: absolute;
+    background-color: rgba(3, 3, 3, 0.5);
+    top: 0;
+    z-index: 11;
+
+    .nav_logo{
+        margin: 0px 60px 0px 40px;
+    }
+
+    .nav_menu{
+        width: 70%;
+        list-style: none;
+        justify-content: space-around;
+        font-size: 20px;
+    }
+
+    a {
+        color: white;
+        font-weight: bold;
+    }
+}
+
+

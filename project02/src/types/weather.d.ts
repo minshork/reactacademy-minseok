@@ -1,0 +1,38 @@
+// .d 가 붙으면 ts -> js로 변환을 하지 않음
+// .d 가 붙지 않으면 ts -> js로 변환을 함
+
+export interface WeatherAPI {
+    coord? : {lon:number; lat:numbar}
+    weather : Array<
+    { id:number
+        main:string
+        description:string
+        icon:string
+    }>
+    main:{
+        temp: number
+        feel_like? : number
+        temp_min? : number
+        temp_max? : number
+        pressure? : number
+        humidity? : number
+    }
+    wind? : {
+        speed? : number
+        deg? : number
+    }
+    sys? :{
+        country? : string
+        sunrise?:number
+        sunset? : number
+    }
+    name : string
+    dt? : number
+}
+
+export interface WeatherData {
+    city : string
+    temp: number
+    icon : string
+    desc : string
+};
