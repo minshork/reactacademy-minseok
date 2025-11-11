@@ -1,36 +1,50 @@
-import React, { useEffect, useState } from "react";
-import styles from './Contact.module.scss'
+import { useState } from "react";
+import axios from "axios";
+import styles from './Contact.module.scss';
 
-const Contact: React.FC = () => {
-  const [n, setN] = useState<number>(5);
-  const [pattern, setPattern] = useState<string>("");
+const Contact:React.FC = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState("");
 
-  useEffect(() => {
-    let result = "";
+  const contactSumit = async (e: any) => {
+    e.preventDefault();
 
-    for (let i = 1; i <= n; i++) {
-      result += " ".repeat(n - i);
-
-      result += "*".repeat(2 * i - 1);
-
-      result += "\n";
+    if (!name || !email || !message) {
+      setStatus("모든 칸을 입력해주세요.");
+      return;
     }
 
-    setPattern(result);
-  }, [n])
+    try {
+      // await axios.post("", {
+      //   name,
+      //   email,
+      //   message,
+      // });
+
+      setStatus("메시지가 성공적으로 전송되었습니다!");
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (error) {
+      setStatus("전송 중 오류가 발생했습니다.");
+    }
+  };
 
   return (
-    <div className={styles.star}>
-      <h2>피라미드 별찍기</h2>
-      <div>
-        <div className={styles.input}>
-          <p>줄 수 : </p>
-          <input type="number" value={n} id="" onChange={(e) => setN(Number(e.target.value))}/>
-        </div>
-      </div>
-      <pre className={styles.py}>
-        {pattern}
-      </pre>
+    <div className={styles.container}>
+      <h2>문의사항</h2>
+      <p>문의사항이 있으시면 아래 양식을 작성해주세요.</p>
+
+      <form className={styles.mainCon} onSubmit={contactSumit}>
+        <input type="text" placeholder="이름" value={name} onChange={(e: any) => setName(e.target.value)} />
+        <input type="email" placeholder="이메일" value={email} onChange={(e: any) => setEmail(e.target.value)} />
+        <textarea placeholder="메시지" value={message} onChange={(e: any) => setMessage(e.target.value)} rows={5} />
+        <button type="submit">보내기</button>
+      </form>
+
+      <p style={{ marginTop: "10px" }}>{status}</p>
     </div>
   );
 };

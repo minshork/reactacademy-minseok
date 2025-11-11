@@ -1,17 +1,12 @@
-.star{
+.container{
+    padding: 40px;
     text-align: center;
 
-    .input{
+    .mainCon{
         display: flex;
-        height: 40px;
-        justify-content: center;
-        align-items: center;
-        // border: 1px solid black;
-    }
-
-    .py{
-        line-height: 1.1;
-        display: inline-block;
-        text-align: left;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 400px;
+        margin: 20px auto;
     }
 }

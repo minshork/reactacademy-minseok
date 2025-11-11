@@ -12,7 +12,7 @@ const Products:React.FC = () => {
   useEffect(() => {
     const load = async () => {
       try{
-        const {data} = await axios.get<Product[]>("./products.json")
+        const {data} = await axios.get<Product[]>("/products.json")
         setList(data)
       }
       catch(err){
